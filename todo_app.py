@@ -20,15 +20,28 @@ def add_task(tasks):
     save_tasks(tasks)
     print("Tarefa adicionada.")
 
+# Novo código para marcar tarefa como feita
+def mark_task_done(tasks):
+    task_id = input("ID da tarefa a marcar como feita: ")
+    if task_id in tasks and not tasks[task_id]['done']:
+        tasks[task_id]['done'] = True
+        save_tasks(tasks)
+        print("Tarefa marcada como feita.")
+    else:
+        print("Tarefa não encontrada ou já concluída.")
+
 def main():
     tasks = load_tasks()
     while True:
         print("\n1. Adicionar tarefa")
+        print("2. Marcar tarefa como feita")  # Nova opção no menu
         print("5. Sair")
         choice = input("Escolha uma opção: ")
 
         if choice == "1":
             add_task(tasks)
+        elif choice == "2":
+            mark_task_done(tasks)  # Lida com a marcação de tarefa como feita
         elif choice == "5":
             print("Saindo do programa.")
             sys.exit()
@@ -37,4 +50,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
