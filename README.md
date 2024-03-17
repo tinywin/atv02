@@ -1,4 +1,4 @@
-# atv02
+# Atividade 2
 
 Esta aplicação de lista de tarefas é uma ferramenta de linha de comando simples, mas poderosa, desenvolvida em Python. Ela permite aos usuários gerenciar suas tarefas diárias de forma eficaz, adicionando tarefas à lista, marcando tarefas como concluídas e removendo tarefas da lista. O objetivo deste projeto é fornecer uma interface simples e intuitiva para gerenciamento de tarefas, utilizando operações de arquivo para persistência de dados.
 
