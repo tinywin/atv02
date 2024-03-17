@@ -43,7 +43,6 @@ def delete_task(tasks):
     else:
         print("Tarefa não encontrada.")
 
-# Nova funcionalidade para listar tarefas pendentes
 def list_pending_tasks(tasks):
     print("\nTarefas Pendentes:")
     pending_tasks = {id: info for id, info in tasks.items() if not info['done']}
@@ -59,7 +58,7 @@ def main():
         print("\n1. Adicionar tarefa")
         print("2. Marcar tarefa como feita")
         print("3. Excluir tarefa")
-        print("4. Listar tarefas pendentes")  # Nova opção adicionada ao menu
+        print("4. Listar tarefas pendentes")
         print("5. Sair")
         choice = input("Escolha uma opção: ")
 
@@ -69,7 +68,7 @@ def main():
             mark_task_done(tasks)
         elif choice == "3":
             delete_task(tasks)
-        elif choice == "4":  # Implementação da opção de listar tarefas pendentes
+        elif choice == "4":
             list_pending_tasks(tasks)
         elif choice == "5":
             print("Saindo do programa.")
