@@ -1,12 +1,18 @@
 import sys
 
 def load_tasks():
+    tasks = {}
     try:
         with open('tasks.txt', 'r') as file:
-            tasks = [line.strip().split(';', 2) for line in file.readlines()]
-        return {task[0]: {'done': task[1] == 'True', 'description': task[2]} for task in tasks}
+            for line in file.readlines():
+                parts = line.strip().split(';', 2)
+                if len(parts) == 3:
+                    task_id, done, description = parts
+                    tasks[task_id] = {'done': done == 'True', 'description': description}
     except FileNotFoundError:
-        return {}
+        pass
+    return tasks
+
 
 def save_tasks(tasks):
     with open('tasks.txt', 'w') as file:
@@ -20,7 +26,6 @@ def add_task(tasks):
     save_tasks(tasks)
     print("Tarefa adicionada.")
 
-# Novo código para marcar tarefa como feita
 def mark_task_done(tasks):
     task_id = input("ID da tarefa a marcar como feita: ")
     if task_id in tasks and not tasks[task_id]['done']:
@@ -30,18 +35,30 @@ def mark_task_done(tasks):
     else:
         print("Tarefa não encontrada ou já concluída.")
 
+def delete_task(tasks):
+    task_id = input("ID da tarefa a remover: ")
+    if task_id in tasks:
+        del tasks[task_id]
+        save_tasks(tasks)
+        print("Tarefa removida.")
+    else:
+        print("Tarefa não encontrada.")
+
 def main():
     tasks = load_tasks()
     while True:
         print("\n1. Adicionar tarefa")
-        print("2. Marcar tarefa como feita")  # Nova opção no menu
+        print("2. Marcar tarefa como feita")
+        print("3. Excluir tarefa")
         print("5. Sair")
         choice = input("Escolha uma opção: ")
 
         if choice == "1":
             add_task(tasks)
         elif choice == "2":
-            mark_task_done(tasks)  # Lida com a marcação de tarefa como feita
+            mark_task_done(tasks)
+        elif choice == "3":
+            delete_task(tasks) 
         elif choice == "5":
             print("Saindo do programa.")
             sys.exit()
