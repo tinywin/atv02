@@ -4,7 +4,7 @@ Esta aplicação de lista de tarefas é uma ferramenta de linha de comando simpl
 
 ## Funcionalidades Desenvolvidas
 
-Adicionar Tarefa:Os usuários podem adicionar novas tarefas à lista, cada uma com uma descrição única. Uma vez adicionada, a tarefa é armazenada em um arquivo de texto (`tasks.txt`), permitindo persistência entre as execuções do programa.
+Adicionar Tarefa: Os usuários podem adicionar novas tarefas à lista, cada uma com uma descrição única. Uma vez adicionada, a tarefa é armazenada em um arquivo de texto (`tasks.txt`), permitindo persistência entre as execuções do programa.
   
 Marcar Tarefa Como Feita: Esta funcionalidade permite aos usuários marcar uma tarefa específica como concluída. Ao marcar uma tarefa como feita, o status da tarefa é atualizado no arquivo de persistência.
   
@@ -13,6 +13,7 @@ Excluir Tarefa: Os usuários podem remover tarefas específicas da lista, utiliz
 ## Tecnologias Utilizadas
 
 Linguagem de Programação: Python
+
 Armazenamento de Dados: Arquivo de texto (`tasks.txt`)
 
 ## Como Usar
