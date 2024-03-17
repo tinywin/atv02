@@ -43,6 +43,7 @@ def delete_task(tasks):
     else:
         print("Tarefa não encontrada.")
 
+
 def list_pending_tasks(tasks):
     print("\nTarefas Pendentes:")
     pending_tasks = {id: info for id, info in tasks.items() if not info['done']}
