@@ -10,7 +10,7 @@ Marcar Tarefa Como Feita: Esta funcionalidade permite aos usuários marcar uma t
   
 Excluir Tarefa: Os usuários podem remover tarefas específicas da lista, utilizando o ID da tarefa como referência. Ao excluir uma tarefa, a entrada correspondente é removida do arquivo de persistência.
 
-Verificar as Tarefas pendentes: O usuário verifica se existem tarefas ainda não concluídas no arquivo.
+Verificar as Tarefas pendentes: O usuário verifica se existem tarefas ainda não concluídas no arquivo e as mostra se houver.
 
 ## Tecnologias Utilizadas
 
