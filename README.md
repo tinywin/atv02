@@ -22,7 +22,3 @@ Armazenamento de Dados: Arquivo de texto (`tasks.txt`)
 2. Navegue até o diretório do projeto através do terminal.
 3. Execute o programa com o comando `python todo_app.py`.
 4. Siga as instruções no menu de linha de comando para gerenciar suas tarefas.
-
-## Contribuições
-
-Este projeto foi desenvolvido seguindo o modelo de GitFlow, garantindo um fluxo de trabalho organizado e facilitando a contribuição de múltiplos desenvolvedores. As contribuições são bem-vindas e devem também seguir este modelo, criando features, releases e hotfixes conforme necessário.
